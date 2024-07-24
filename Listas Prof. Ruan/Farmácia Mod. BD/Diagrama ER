@@ -1,0 +1,73 @@
+[Cliente] (1,1) ---- (0,N) [Venda]
+ [ID_Cliente]              [ID_Venda]
+  Nome                      Data
+  Endereço                  Valor_Total
+  Telefone                  Tipo_de_Pagamento
+  Cartão_Fidelidade (opcional) ID_Cliente (FK)
+                           
+
+[Cliente] (1,1) ---- (0,N) [Receita]
+ [ID_Cliente]              [ID_Receita]
+  Nome                      Data_de_Emissão
+  Endereço                  Nome_do_Médico
+  Telefone                  ID_Cliente (FK)
+  Cartão_Fidelidade (opcional)
+
+[Venda] (1,N) ---- (1,N) [Produto_Venda]
+ [ID_Venda]             [ID_Venda (FK)]
+  Data                   ID_Medicamento (FK)
+  Valor_Total            Quantidade
+  Tipo_de_Pagamento      Valor
+
+[Receita] (1,N) ---- (1,N) [Medicamento_Receita]
+ [ID_Receita]             [ID_Receita (FK)]
+  Data_de_Emissão          ID_Medicamento (FK)
+  Nome_do_Médico           Quantidade
+  ID_Cliente (FK)
+
+[Fornecedor] (1,1) ---- (0,N) [Compra]
+ [ID_Fornecedor]             [ID_Compra]
+  Nome                       Data
+  Endereço                   ID_Fornecedor (FK)
+  Contato
+
+[Compra] (1,N) ---- (1,N) [Produto_Compra]
+ [ID_Compra]             [ID_Compra (FK)]
+  Data                    ID_Medicamento (FK)
+  ID_Fornecedor (FK)      Quantidade
+                          Data_de_Validade
+
+[Medicamento] (1,N) ---- (1,N) [Produto_Venda]
+ [ID_Medicamento]       [ID_Medicamento (FK)]
+  Nome                   Quantidade
+  Descrição              Valor
+  Código_de_Barras
+  Quantidade_em_Estoque
+  Preço
+  Tipo
+
+[Medicamento] (1,N) ---- (1,N) [Produto_Compra]
+ [ID_Medicamento]       [ID_Medicamento (FK)]
+  Nome                   Quantidade
+  Descrição              Data_de_Validade
+  Código_de_Barras
+  Quantidade_em_Estoque
+  Preço
+  Tipo
+
+[Medicamento] (1,N) ---- (1,N) [Medicamento_Receita]
+ [ID_Medicamento]       [ID_Medicamento (FK)]
+  Nome                   Quantidade
+  Descrição
+  Código_de_Barras
+  Quantidade_em_Estoque
+  Preço
+  Tipo
+
+[Funcionário] (1,1) ---- (0,N) [Farmácia]
+ [ID_Funcionário]           [ID_Funcionário]
+  Nome                       Nome
+  Identificação              Localização
+  Cargo                      Telefone
+  Horário_de_Trabalho
+  Registro_Profissional (para farmacêuticos)

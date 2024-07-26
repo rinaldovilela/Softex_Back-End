@@ -1,0 +1,68 @@
+Entidades e Atributos
+
+
+Cliente
+
+ID_Cliente (PK)
+Nome
+Endereço
+Telefone
+Cartão_Fidelidade (opcional)
+Funcionário
+
+ID_Funcionário (PK)
+Nome
+Identificação
+Cargo
+Horário_de_Trabalho
+Registro_Profissional (para farmacêuticos)
+Medicamento
+
+ID_Medicamento (PK)
+Nome
+Descrição
+Código_de_Barras
+Quantidade_em_Estoque
+Preço
+Tipo (e.g., analgésico, antibiótico)
+Receita
+
+ID_Receita (PK)
+Data_de_Emissão
+Nome_do_Médico
+ID_Cliente (FK)
+Venda
+
+ID_Venda (PK)
+Data
+Valor_Total
+Tipo_de_Pagamento (dinheiro, cartão de crédito, cartão de débito)
+ID_Cliente (FK)
+Fornecedor
+
+ID_Fornecedor (PK)
+Nome
+Endereço
+Contato
+Compra
+
+ID_Compra (PK)
+Data
+ID_Fornecedor (FK)
+Produto_Compra
+
+ID_Compra (FK)
+ID_Medicamento (FK)
+Quantidade
+Data_de_Validade
+Produto_Venda
+
+ID_Venda (FK)
+ID_Medicamento (FK)
+Quantidade
+Valor
+Medicamento_Receita
+
+ID_Receita (FK)
+ID_Medicamento (FK)
+Quantidade

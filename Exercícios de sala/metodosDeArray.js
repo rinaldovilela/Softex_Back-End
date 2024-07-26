@@ -1,0 +1,16 @@
+/* JavaScript Array Methods
+
+- ARRAY.MAP()       - ARRAY.()
+- ARRAY.FILTER()       - ARRAY.()
+- ARRAY.REDUCE()       - ARRAY.()
+- ARRAY.REDUCERIGTH()       - ARRAY.()
+- ARRAY.FILL()       - ARRAY.()
+- ARRAY.FIND()       - ARRAY.()
+- ARRAY.INDEXOF()       - ARRAY.()
+- ARRAY.()       - ARRAY.()
+- ARRAY.()       - ARRAY.()
+- ARRAY.()       - ARRAY.()
+- ARRAY.()       - ARRAY.()
+- ARRAY.()       - ARRAY.()
+- ARRAY.()       - ARRAY.()
+- ARRAY.()       - ARRAY.()

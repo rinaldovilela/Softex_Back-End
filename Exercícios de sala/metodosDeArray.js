@@ -110,9 +110,6 @@ console.log(encontrarProdutoPorId(2));
 
 */
 
-/*
-
-
 // Atividade 3 :Encontrar o Usuário pelo Nome.
 
 const users = [
@@ -132,5 +129,3 @@ function findByUserName(name) {
 }
 
 console.log(findByUserName("João"));
-
-*/
